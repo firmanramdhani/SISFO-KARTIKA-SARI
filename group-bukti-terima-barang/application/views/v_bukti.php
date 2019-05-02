@@ -96,7 +96,7 @@
                     value.created,
                     value.perusahaan,
                     value.budget,
-                    value.status,
+                    value.status == 2 ? "Barang Sedang Dipesan" : "Barang Sudah Diterima",
                     "<button class='btn btn-primary' data-toggle='modal' data-target='#myModal' onClick='setBarang("+value.idproposal+", "+value.status+")'>Lihat Detail</button>"
                 ]).draw(false);
             });
