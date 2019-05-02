@@ -1,0 +1,35 @@
+.navbar-nav {
+	flex-direction: row;
+}
+
+
+.menubar > li {
+	margin-right: 50px !important;
+}
+
+.card {
+	margin: 10px;
+}
+
+.valore-picker {
+	margin: 0em;
+	margin-bottom: 2em;
+	width: 18rem;
+}
+
+.valore-button-group{
+	margin:2em
+}
+
+.valore-collapsible {
+	overflow: hidden;
+	transition: height 0.3s;
+	padding: 0;
+	margin: 0;
+}
+  
+.valore-collapsible .valore-wrapper {
+	margin: 0;
+	padding: 0	;
+	min-height: 20px;	
+}
