@@ -17,7 +17,7 @@ class Mcart extends CI_model
     $data =[
       "idonlinetransaction"=>$id,
       "idcustomer"=>$this->input->post('idcustomer',true),
-      "status"=>-1,
+      "status"=>0,
     ];
     $this->db->insert('onlinetransaction',$data);
 

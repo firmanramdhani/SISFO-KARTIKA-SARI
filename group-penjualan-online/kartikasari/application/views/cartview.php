@@ -94,7 +94,7 @@
                                             <td class="product-name"><a href="#"><?php echo $d->nama ?></a></td>
                                             <td class="product-price"><span class="amount"><?php echo $d->harga ?></span></td>
                                             <input type="hidden" name="harga" id="harga" value="<?php echo $d->harga ?>">
-                                            <td class="product-quantity"><a href=><?php echo $d->qty ?><span></td>
+                                            <td class="product-quantity"><span><?php echo $d->qty ?><span></td>
                                             <?php $subtotal = $d->harga * $d->qty ?>
                                             <td class="product-subtotal"><span id="total"><?php echo $subtotal ?></span></td>
                                             <!--td class="product-remove"><a href="#"><i class="icon-trash icons"></i></a></td-->

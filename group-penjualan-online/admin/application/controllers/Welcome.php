@@ -22,7 +22,7 @@ class Welcome extends CI_Controller {
 		parent::__construct();
 		$this->load->model('M_login');
 
-		
+
 	}
 	public function index()
 	{
@@ -44,7 +44,7 @@ class Welcome extends CI_Controller {
 				redirect('welcome');
 			}
 		}
-		
+
 	}
 	public function logout(){
 		$this->session->unset_userdata('admin');

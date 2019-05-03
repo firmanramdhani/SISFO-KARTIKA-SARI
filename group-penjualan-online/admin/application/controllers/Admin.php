@@ -20,14 +20,31 @@ class Admin extends CI_Controller {
 	 */
 	public function __construct(){
 		parent::__construct();
+		$this->load->helper('url');
 		$this->load->model('M_login');
+		$this->load->model('M_transaksi');
 
 
 	}
 	public function index()
 	{
 		if($this->session->userdata('admin')){
-			$this->load->view('dashboard/konten');
+			$data['list']['transaksi'] = $this->M_transaksi->getdata();
+			$this->load->view('dashboard/konten',$data);
 		}
+	}
+
+	public function accept($id)
+	{
+		$where = array(
+      'idonlinetransaction' => $id
+    );
+
+    $data = array(
+      'status' => 1
+    );
+
+		$this->M_transaksi->status_accept($where,$data,'onlinetransaction');
+		redirect('admin');
 	}
 }
