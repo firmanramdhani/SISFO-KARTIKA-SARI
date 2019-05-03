@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\application",
+    "\\application\\config",
+    "\\application\\controllers",
+    "\\application\\models",
+    "\\application\\views",
+    "\\application\\views\\barang",
+    "\\application\\views\\dashboard"
+  ],
+  "SelectedNode": "\\application\\views\\dashboard\\sidebar.php",
+  "PreviewInSolutionExplorer": false
+}
