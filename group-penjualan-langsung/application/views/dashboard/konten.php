@@ -98,13 +98,16 @@
                     <table class="table table-{color} yuhu">
                     <thead class="thead-light">
                       <tr>
-                        <th>ID Pesanan</th>
-                          <th>Nama Pemesan</th>
-                          <th>No Telepon</th>
-                          <th>Alamat Tujuan</th>
-                          <th>Tanggal</th>
-                          <th>Edit / Hapus</th>
+                        <th>Kode Barang</th>
+                          <th>Nama Barang</th>
+                          <th>Harga Satuan</th>
+                          <th>Jumlah Jual</th>
+                          <th>Harga Akhir</th>
+                          <th>Opsi</th>
                       </tr>
+           
+                     
+                    
                     </thead>
                   </table>
                   </div>

@@ -1,6 +1,6 @@
 <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-        <a class="navbar-brand brand-logo" href="index.html">
+        <a class="navbar-brand brand-logo" href="<?php echo base_url()?>">
           <img src="<?php echo base_url()?>assets/images/5cc538a691551.svg" alt="logo"  style="height: 80px;"/>
         </a>
        
