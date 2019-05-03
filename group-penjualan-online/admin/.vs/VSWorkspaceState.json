@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\application",
+    "\\application\\config",
+    "\\application\\controllers",
+    "\\application\\views",
+    "\\application\\views\\barang",
+    "\\application\\views\\dashboard"
+  ],
+  "SelectedNode": "\\application\\views\\barang\\konten.php",
+  "PreviewInSolutionExplorer": false
+}
