@@ -1,6 +1,6 @@
 # Kelompok Distribusi Barang
 
-## Progam ini tentang distribusi barang dari gudang ke toko, sebelum pengiriman dilakukan pengajuan oleh manager toko, yang mana nanti akan diterima oleh karyawan gudang. Karyawan gudang akan merubah status dari 0 menjadi 1 yang artinya diterima. Ketika sudah diterima karyawan gudang dapat mengupdate stock yang ada.
+Progam ini tentang distribusi barang dari gudang ke toko, sebelum pengiriman dilakukan pengajuan oleh manager toko, yang mana nanti akan diterima oleh karyawan gudang. Karyawan gudang akan merubah status dari 0 menjadi 1 yang artinya diterima. Ketika sudah diterima karyawan gudang dapat mengupdate stock yang ada.
 
 ### Anggota Kelompok
 Muhammad Zaki Faizal 1301160186
