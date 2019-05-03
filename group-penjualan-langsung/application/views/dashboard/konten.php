@@ -21,6 +21,61 @@
 
   <link rel="shortcut icon" href="<?php echo base_url()?>assets/images/favicon.ico" />
   <link href="<?php echo base_url()?>assets/css/bootstrap.min.css" rel="stylesheet" />
+
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $(".add-row").click(function(){
+            var kodebarang = $("#kodebarang").val();
+            var namabarang = $("#namabarang").val();
+            var harga = $("#harga").val();
+            var jumlah = $("#jumlah").val();
+            var hargaakhir = harga * jumlah;
+            if(jumlah != 0){
+                 var markup = "<tr><td>"+kodebarang+"</td><td>"+namabarang+"</td><td>"+harga+"</td><td>"+jumlah+"</td><td>"+hargaakhir+"</td><td><button class='btn btn-danger delete-row' name='record'>Hapus</button></td></tr>";
+            
+            };
+          $("table tbody").append(markup);
+
+            // var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + name + "</td><td>" + email + "</td></tr>";
+            // $("table tbody").append(markup);
+        });
+        
+        // Find and remove selected table rows
+        $(".delete-row").click(function(){
+            $("table tbody").find('input[name="record"]').each(function(){
+            	if($(this).is(":click")){
+                    $(this).parents("tr").remove();
+                }
+            });
+        });
+
+
+
+        // $(".delete-row").click(function(){
+        //     $("table tbody").find('input[name="record"]').each(function(){
+        //     	if($(this).is(":checked")){
+        //             $(this).parents("tr").remove();
+        //         }
+        //     });
+        // });
+    });    
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
 </head>
 <?php if ($this->session->flashdata("message")) { ?>
         <script type="text/javascript">
@@ -46,7 +101,7 @@
                 <div class="card-body">
                   <h2 class="card-title">Input Data Pesana</h2>
                   
-                  
+                  <form>
                   <table class="table col-4" style="margin-top : 20px;">
                     <thead class="thead-light">
                       <tr>
@@ -72,7 +127,7 @@
                     
                     </thead>
                   </table>
-
+                  </form>
 
                   <table class="table table-{color}">
                     <thead class="thead-light">
@@ -80,36 +135,50 @@
                         <td>Kode Barang</td>
                           <td>Nama Barang</td>
                           <td>Harga</td>
-						              <td>Stok</td>
+						              <td>Jumlah</td>
                       </tr>
                       <tr>
-                        <td><input type="text" style="width : 170px;"></td>
-                        <td><input type="text" style="width : 170px;"></td>
-                        <td><input type="text" style="width : 170px;"></td>
-                        <td><input type="text" style="width : 170px;"></td>
+                        <td><input type="text" id="kodebarang" style="width : 170px;"></td>
+                        <td><input type="text" id="namabarang"style="width : 170px;"></td>
+                        <td><input type="text" id="harga" style="width : 170px;"></td>
+                        <td><input type="text" id="jumlah"style="width : 170px;"></td>
                       </tr>
                       <tr>
-                        <td colspan = 4><button style="width : 950px; height : 30px; margin-bottom : 30px; background-color: #3f89ff; color: white;">SIMPAN</button></td>
+                        <td colspan = 4><input type ="button" value="SIMPAN"class="add-row" style="width : 100px; height : 30px; margin-bottom : 30px; background-color: #3f89ff; color: white;"></td>
                       </tr>
                     
                   </table>
                   
                   <div class="table-responsive">
-                    <table class="table table-{color} yuhu">
-                    <thead class="thead-light">
-                      <tr>
-                        <th>Kode Barang</th>
-                          <th>Nama Barang</th>
-                          <th>Harga Satuan</th>
-                          <th>Jumlah Jual</th>
-                          <th>Harga Akhir</th>
-                          <th>Opsi</th>
-                      </tr>
-           
+                    <table class="table table-{color}">
+                      <thead class="thead-light">
+                        <tr>
+                          <th>Kode Barang</th>
+                            <th>Nama Barang</th>
+                            <th>Harga Satuan</th>
+                            <th>Jumlah Jual</th>
+                            <th>Harga Akhir</th>
+                            <th>Opsi</th>
+                        </tr>
+                        </thead>
+                       <tbody></tbody>
                      
-                    
-                    </thead>
+                      
                   </table>
+                  <button style="width : 100px; height : 30px; margin-bottom : 30px; background-color: #3f89ff; color: white;">SIMPAN</button>
+
+
+
+                 
+                    <!-- <tr>
+                        <td colspan=4>Total Tagihan</td>
+                        <td colspan=2></td>
+                        
+                      </tr>
+                      <tr>
+                        <td colspan = 6><button style="width : 900px; height : 30px; margin-bottom : 30px; background-color: #3f89ff; color: white;">SIMPAN</button></td>
+                      </tr>
+                  -->
                   </div>
                 </div>
               </div>
