@@ -22,13 +22,7 @@
   <link rel="shortcut icon" href="<?php echo base_url()?>assets/images/favicon.ico" />
   <link href="<?php echo base_url()?>assets/css/bootstrap.min.css" rel="stylesheet" />
 </head>
-<?php if ($this->session->flashdata("message")) { ?>
-        <script type="text/javascript">
-        $(window).on('load',function(){
-            $('#peringatan').modal('show');
-        });
-        </script>
-    <?php } ?>
+
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
@@ -50,10 +44,27 @@
                     <thead class="thead-light">
                       <tr>
                         <th>ID Transaksi</th>
-                          <th>ID User</th>
-                          <th>Status</th>
+                          <th>ID Customer</th>
+                          <th>Nama Customer</th>
+                          <th>Tanggal Transaksi</th>
+                          <th>Action</th>
                       </tr>
                     </thead>
+                    <tbody>
+                      <?php foreach ($list['transaksi']->result_array() as $data): ?>
+                          <tr>
+                            <td><?php echo $data['idonlinetransaction'] ?></td>
+                            <td><?php echo $data['idcustomer'] ?></td>
+                            <td><?php echo $data['nama'] ?></td>
+                            <td><?php echo $data['tanggaltransaction'] ?></td>
+                            <?php if ($data['status'] == 0){ ?>
+                              <td><a href="<?php echo base_url('admin/accept/'.$data['idonlinetransaction']) ?>" class="btn btn-success" name="accept" > Accept </a></td>
+                            <?php }else if($data['status'] == 1) {?>
+                              <td><button type="button" class="btn btn-secondary" name="button" disabled> Accepted </button></td>
+                            <?php } ?>
+                          </tr>
+                      <?php endforeach; ?>
+                    </tbody>
                   </table>
                   </div>
                 </div>
