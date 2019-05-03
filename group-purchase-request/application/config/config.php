@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/sisfo/purchase_request/';
+$config['base_url'] = 'http://localhost/group-purchase-request';
 
 /*
 |--------------------------------------------------------------------------
