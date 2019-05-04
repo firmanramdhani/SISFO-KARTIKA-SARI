@@ -37,7 +37,11 @@
                  var markup = "<tr><td>"+kodebarang+"</td><td>"+namabarang+"</td><td>"+harga+"</td><td>"+jumlah+"</td><td>"+hargaakhir+"</td><td><button class='btn btn-danger delete-row' name='record'>Hapus</button></td></tr>";
             
             };
-          $("table tbody").append(markup);
+          $('#data').append(markup);
+          $("#kodebarang").val("");
+          $("#namabarang").val("");
+          $("#harga").val("");
+          $("#jumlah").val("");
 
             // var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + name + "</td><td>" + email + "</td></tr>";
             // $("table tbody").append(markup);
@@ -150,7 +154,7 @@
                   </table>
                   
                   <div class="table-responsive">
-                    <table class="table table-{color}">
+                    <table class="table table-{color} ">
                       <thead class="thead-light">
                         <tr>
                           <th>Kode Barang</th>
@@ -161,7 +165,9 @@
                             <th>Opsi</th>
                         </tr>
                         </thead>
-                       <tbody></tbody>
+                       <tbody id="data">
+                       
+                       </tbody>
                      
                       
                   </table>
