@@ -14,3 +14,7 @@ password : manager
 
 username : karyawanGud
 password : karyawan
+
+### Fitur Sistem Informasi
+#### 1. Login
+Sebelum memasuki ke web distribusi barang harus login terlebih dahulu. Login dibagi dua bagian yaitu, login karyawan gudang dan manager toko. masukkan username dan password yang sudah ada seperti di bagian user program.  
